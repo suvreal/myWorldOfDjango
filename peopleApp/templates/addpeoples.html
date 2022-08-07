@@ -1,0 +1,25 @@
+<h1>Add People</h1>
+
+<form action="addpeoplerecord/" method="post">
+    {% csrf_token %} First Name:<br>
+    <input name="firstname">
+    <br><br> Last Name:<br>
+    <input name="lastname">
+    <br><br> City name:<br>
+    <input name="cityname">
+    <br><br> Street name:<br>
+    <input name="streetname">
+    <br><br> House code:<br>
+    <input name="housecode">
+    <br><br> City code:<br>
+    <input name="citycode">
+    <br><br> Is adult:
+    <input name="isadult" value="True" type="radio">
+    <br><br> Level of education:<br>
+    <input name="levelofeducation">
+    <br><br> Current proffestion:<br>
+    <input name="currentproffession">
+    <br><br>
+
+    <input type="submit" value="Submit">
+</form>

@@ -1,0 +1,26 @@
+<h1>Update member</h1>
+
+<form action="updatePeopleRecord/{{ people.id }}" method="post">
+
+    {% csrf_token %} First Name:<br>
+    <input name="firstname" value="{{ people.firstname }}">
+    <br><br> Last Name:<br>
+    <input name="lastname" value="{{ people.lastname }}">
+    <br><br> City name: <br>
+    <input name="cityname" value="{{ people.cityname }}">
+    <br><br> Street name:<br>
+    <input name="streetname" value="{{ people.streetname }}">
+    <br><br> House code:<br>
+    <input name="housecode" value="{{ people.housecode }}">
+    <br><br> City code:<br>
+    <input name="citycode" value="{{ people.citycode }}">
+    <br><br> Is adult:
+    <input name="isadult" value="{{ people.isadult }}" type="radio">
+    <br><br> Level of education:<br>
+    <input name="levelofeducation" value="{{ people.levelofeducation }}">
+    <br><br> Current proffestion:<br>
+    <input name="currentproffession" value="{{ people.currentproffession }}">
+    <br><br>
+
+    <input type="submit" value="Submit">
+</form>

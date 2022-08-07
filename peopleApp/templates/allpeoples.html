@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>ALL PEOPLE</h1>
+
+    <table border="1">
+        <th>
+            <td>ID</td>
+            <td>First name</td>
+            <td>Last name</td>
+            <td>House code</td>
+            <td>City code</td>
+            <td>Street name</td>
+            <td>IS adult</td>
+            <td>Education</td>
+            <td>Proffesion</td>
+        </th>
+        {% for x in people %}
+        <tr>
+            <td>{{ x.id }}</td>
+            <td>{{ x.firstname }}</td>
+            <td>{{ x.lastname }}</td>
+            <td>{{ x.housecode }}</td>
+            <td>{{ x.citycode }}</td>
+            <td>{{ x.cityname }}</td>
+            <td>{{ x.streetname }}</td>
+            <td>{{ x.isadult }}</td>
+            <td>{{ x.levelofeducation }}</td>
+            <td>{{ x.currentproffession }}</td>
+            <td><a href="delete/{{ x.id }}">delete</a></td>
+            <td><a href="update/{{ x.id }}">edit</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p>
+        <a href="addpeoples/">Add member</a>
+    </p>
+
+</body>
+
+</html>
